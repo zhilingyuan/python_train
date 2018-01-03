@@ -1,4 +1,4 @@
-u='www.taobao.com'
+u='www. taobao.com'
 print(u.split(' '))  #默认为空格
 print(u.split( ' ')) 
 print(u.split('.',2))#分割次数，
