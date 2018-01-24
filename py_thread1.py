@@ -15,6 +15,7 @@ def main():
         t.start()
     for t in threads:
         t.join()#等待直到线程结束
+        #join 挡住 无法执行join 后的语句
     print("End Main threading")
 
 

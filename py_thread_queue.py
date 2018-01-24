@@ -9,7 +9,7 @@ class worker(threading.Thread):
    
  def run(self):  
   while not self.thread_stop:  
-   print("thread%d %s: waiting for tast" %(self.ident,self.name))  
+   print("thread%d %s: waiting for task" %(self.ident,self.name))  
    try:  
     task=q.get(block=True, timeout=20)#接收消息  
    except queue.Empty:  
@@ -29,7 +29,7 @@ class worker(threading.Thread):
   self.thread_stop = True  
    
 if __name__ == "__main__":  
- q=queue.Queue(3)  
+ q=queue.Queue()  #queue的大小
  worker=worker(q)  
  worker.start()  
  q.put(["produce one cup!",1], block=True, timeout=None)#产生任务消息  
