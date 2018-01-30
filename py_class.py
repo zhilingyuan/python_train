@@ -20,3 +20,5 @@ print(a.__class__.__dict__)
 print(a.__dict__)
 print(b.__class__.__dict__)
 print(b.__dict__)
+# 为了避免 出现重复的class 中内容
+# 应该添加class 内不__init__ 方法
